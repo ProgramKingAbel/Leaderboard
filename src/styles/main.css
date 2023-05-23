@@ -6,3 +6,56 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+section {
+  width: 85%;
+  margin: 4rem auto;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.all-scores {
+  border: 2px solid black;
+}
+
+.list-item {
+  padding: 0.5rem;
+}
+
+.list-item:nth-child(even) {
+  background-color: gray;
+}
+
+.user-input {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-input h2,
+input {
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+.btn {
+  width: 20%;
+  align-self: flex-end;
+  padding: 0.2rem;
+  background: transparent;
+  cursor: pointer;
+}
