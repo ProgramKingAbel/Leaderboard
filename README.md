@@ -2,7 +2,7 @@
 
 <div align="center">  
 
-  <h3><b>TO DO LIST</b></h3>
+  <h3><b>LEADERBOARD</b></h3>
 
 </div>
 
@@ -21,11 +21,10 @@
 
 
 
-# 📖 [TO DO LIST] <a name="about-project"></a>
+# 📖 [The leaderboard] <a name="about-project"></a>
 
 
-**TO DO LIST WEB AOO** is a basic website that allows users to add/remove tasks they wish to accomplish and delete them once they have accomplished them.
-
+**The leaderboard**  website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -58,30 +57,27 @@ This is the mobile responsive version for now as it is build using the mobile fi
 
 - **[FORM Section]**
 
-This is form where the user is able to add tasks to their Todo Lists.
+This is form where the user is able to add their scores.
 
-- **[Tasks Section]**
+- **[Scores Section]**
 
-This is the details of details of tasks entered by the user, and can mark on completed tasks.
+This is the details of details of scores entered by the user. a
 
 - **[Live project samples]**
 
-Application is deployed on Github Pages. You can find link in demo
+Application is yet to be deployed on Github Pages. 
 
 - **[local Storage functionality]**
 
 Utilizes local storage for tasks storage
 
-- **[Enabled functionality in terms of Inserting and Deleting of Tasks]**
-
-Works for individual as well as all tasks.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [View Application](https://programkingabel.github.io/Todo-List/dist/)
+- [Yet to be released]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
