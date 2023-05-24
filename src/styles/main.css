@@ -37,10 +37,15 @@ section {
   background-color: gray;
 }
 
-.user-input {
+.user-input,
+form {
   width: 80%;
   display: flex;
   flex-direction: column;
+}
+
+form {
+  width: 100%;
 }
 
 .user-input h2,

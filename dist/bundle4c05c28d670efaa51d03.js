@@ -2,6 +2,56 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/displayData.js":
+/*!************************************!*\
+  !*** ./src/modules/displayData.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var display = function display(data) {
+  var container = document.querySelector('.all-scores');
+  data.result.forEach(function (el) {
+    var listItem = document.createElement('li');
+    listItem.classList = 'list-item';
+    listItem.innerHTML = "".concat(el.user, ": ").concat(el.score);
+    container.appendChild(listItem);
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (display);
+
+/***/ }),
+
+/***/ "./src/modules/userInput.js":
+/*!**********************************!*\
+  !*** ./src/modules/userInput.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _apiData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./apiData */ "./src/modules/apiData");
+
+var postUserData = function postUserData(e) {
+  e.preventDefault();
+  var pName = document.getElementById('name').value;
+  var pScore = document.getElementById('score').value;
+  var player = {
+    user: pName,
+    score: pScore
+  };
+  (0,_apiData__WEBPACK_IMPORTED_MODULE_0__.sendData)(player);
+  document.getElementById('dataForm').reset();
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postUserData);
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css":
 /*!*******************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css ***!
@@ -21,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  margin: 0;\r\n  padding: 0;\r\n  outline: 0;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nsection {\r\n  width: 85%;\r\n  margin: 4rem auto;\r\n}\r\n\r\n.heading {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  gap: 2rem;\r\n  margin: 1rem 0;\r\n}\r\n\r\n.all-scores {\r\n  border: 2px solid black;\r\n}\r\n\r\n.list-item {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.list-item:nth-child(even) {\r\n  background-color: gray;\r\n}\r\n\r\n.user-input {\r\n  width: 80%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.user-input h2,\r\ninput {\r\n  margin-bottom: 1rem;\r\n}\r\n\r\ninput {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.btn {\r\n  width: 20%;\r\n  align-self: flex-end;\r\n  padding: 0.2rem;\r\n  background: transparent;\r\n  cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,UAAU;EACV,gBAAgB;EAChB,qBAAqB;EACrB,sBAAsB;AACxB;;AAEA;EACE,UAAU;EACV,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,SAAS;EACT,cAAc;AAChB;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,sBAAsB;AACxB;;AAEA;;EAEE,mBAAmB;AACrB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,UAAU;EACV,oBAAoB;EACpB,eAAe;EACf,uBAAuB;EACvB,eAAe;AACjB","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  outline: 0;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nsection {\r\n  width: 85%;\r\n  margin: 4rem auto;\r\n}\r\n\r\n.heading {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  gap: 2rem;\r\n  margin: 1rem 0;\r\n}\r\n\r\n.all-scores {\r\n  border: 2px solid black;\r\n}\r\n\r\n.list-item {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.list-item:nth-child(even) {\r\n  background-color: gray;\r\n}\r\n\r\n.user-input {\r\n  width: 80%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.user-input h2,\r\ninput {\r\n  margin-bottom: 1rem;\r\n}\r\n\r\ninput {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.btn {\r\n  width: 20%;\r\n  align-self: flex-end;\r\n  padding: 0.2rem;\r\n  background: transparent;\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  margin: 0;\r\n  padding: 0;\r\n  outline: 0;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nsection {\r\n  width: 85%;\r\n  margin: 4rem auto;\r\n}\r\n\r\n.heading {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  gap: 2rem;\r\n  margin: 1rem 0;\r\n}\r\n\r\n.all-scores {\r\n  border: 2px solid black;\r\n}\r\n\r\n.list-item {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.list-item:nth-child(even) {\r\n  background-color: gray;\r\n}\r\n\r\n.user-input,\r\nform {\r\n  width: 80%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\nform {\r\n  width: 100%;\r\n}\r\n\r\n.user-input h2,\r\ninput {\r\n  margin-bottom: 1rem;\r\n}\r\n\r\ninput {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.btn {\r\n  width: 20%;\r\n  align-self: flex-end;\r\n  padding: 0.2rem;\r\n  background: transparent;\r\n  cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,UAAU;EACV,gBAAgB;EAChB,qBAAqB;EACrB,sBAAsB;AACxB;;AAEA;EACE,UAAU;EACV,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,SAAS;EACT,cAAc;AAChB;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,sBAAsB;AACxB;;AAEA;;EAEE,UAAU;EACV,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,WAAW;AACb;;AAEA;;EAEE,mBAAmB;AACrB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,UAAU;EACV,oBAAoB;EACpB,eAAe;EACf,uBAAuB;EACvB,eAAe;AACjB","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  outline: 0;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nsection {\r\n  width: 85%;\r\n  margin: 4rem auto;\r\n}\r\n\r\n.heading {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.content {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  gap: 2rem;\r\n  margin: 1rem 0;\r\n}\r\n\r\n.all-scores {\r\n  border: 2px solid black;\r\n}\r\n\r\n.list-item {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.list-item:nth-child(even) {\r\n  background-color: gray;\r\n}\r\n\r\n.user-input,\r\nform {\r\n  width: 80%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\nform {\r\n  width: 100%;\r\n}\r\n\r\n.user-input h2,\r\ninput {\r\n  margin-bottom: 1rem;\r\n}\r\n\r\ninput {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.btn {\r\n  width: 20%;\r\n  align-self: flex-end;\r\n  padding: 0.2rem;\r\n  background: transparent;\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -466,6 +516,47 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/modules/apiData":
+/*!*****************************!*\
+  !*** ./src/modules/apiData ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getData: () => (/* binding */ getData),
+/* harmony export */   sendData: () => (/* binding */ sendData)
+/* harmony export */ });
+/* harmony import */ var _displayData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayData */ "./src/modules/displayData.js");
+
+
+const game = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/basketball/scores/';
+
+//get the data from the API
+const getData = async () => {
+    await fetch(game)
+        .then(gameData => gameData.json())
+        .then(json => (0,_displayData__WEBPACK_IMPORTED_MODULE_0__["default"])(json));
+    
+}
+
+//send data to the API
+const sendData = async (data) => {
+    await fetch(game, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    }).then((sendData) => sendData.json())
+        .then((json) => console.log(json));
+        
+}
+
+
+
 /***/ })
 
 /******/ 	});
@@ -548,10 +639,18 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _modules_apiData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/apiData */ "./src/modules/apiData");
+/* harmony import */ var _modules_userInput_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/userInput.js */ "./src/modules/userInput.js");
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 
+
+
+var form = document.getElementById('dataForm');
+var refresh = document.getElementById('refresh');
+form.addEventListener('submit', _modules_userInput_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+refresh.addEventListener('click', _modules_apiData__WEBPACK_IMPORTED_MODULE_0__.getData);
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle40d6c5c78a67fdee77ef.js.map
+//# sourceMappingURL=bundle4c05c28d670efaa51d03.js.map
