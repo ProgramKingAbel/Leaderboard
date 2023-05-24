@@ -37,7 +37,8 @@ section {
   background-color: gray;
 }
 
-.user-input ,form {
+.user-input,
+form {
   width: 80%;
   display: flex;
   flex-direction: column;

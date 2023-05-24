@@ -1,6 +1,7 @@
 import { getData } from './modules/apiData';
-import postUserData from './modules/userInput';
+import postUserData from './modules/userInput.js';
 import './styles/main.css';
+
 const form = document.getElementById('dataForm');
 const refresh = document.getElementById('refresh');
 

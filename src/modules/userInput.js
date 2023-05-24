@@ -1,18 +1,17 @@
-
-import { sendData } from "./apiData";
+import { sendData } from './apiData';
 
 const postUserData = (e) => {
-    e.preventDefault();
-    const pName = document.getElementById('name').value;
-    const pScore = document.getElementById('score').value;
-    
-    const player = {
-        user: pName,
-        score:  pScore,   
-    }
-    
-    sendData(player);
-    document.getElementById('dataForm').reset();
-}
+  e.preventDefault();
+  const pName = document.getElementById('name').value;
+  const pScore = document.getElementById('score').value;
+
+  const player = {
+    user: pName,
+    score: pScore,
+  };
+
+  sendData(player);
+  document.getElementById('dataForm').reset();
+};
 
 export default postUserData;
