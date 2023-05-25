@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +8,27 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+.fonts {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #032c72;
+}
 
-section {
+.wrapper {
   width: 85%;
   margin: 4rem auto;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .heading {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .content {
@@ -34,7 +47,7 @@ section {
 }
 
 .list-item:nth-child(even) {
-  background-color: gray;
+  background-color: #032c725b;
 }
 
 .user-input,
@@ -55,6 +68,7 @@ input {
 
 input {
   padding: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 .btn {
@@ -63,4 +77,11 @@ input {
   padding: 0.2rem;
   background: transparent;
   cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.btn:hover {
+  background-color: #032c72;
+  color: #fff;
+
 }
