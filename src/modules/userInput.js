@@ -10,10 +10,9 @@ const postUserData = (e) => {
       user: pName,
       score: pScore,
     };
-    sendData(player); 
+    sendData(player);
     document.getElementById('dataForm').reset();
   }
-
 };
 
 export default postUserData;
