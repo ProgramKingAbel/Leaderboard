@@ -1,4 +1,4 @@
-import { getData } from './modules/apiData';
+import { getData } from './modules/apiData.js';
 import postUserData from './modules/userInput.js';
 import './styles/main.css';
 

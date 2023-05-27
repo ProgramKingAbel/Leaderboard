@@ -1,4 +1,4 @@
-import { sendData } from './apiData';
+import { sendData } from './apiData.js';
 
 const postUserData = (e) => {
   e.preventDefault();
